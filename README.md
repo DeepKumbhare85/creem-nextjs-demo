@@ -1,12 +1,11 @@
 # Creem + Next.js Demo
 
-A minimal Next.js demo showcasing how to accept one-time payments and subscriptions using [Creem](https://www.creem.io), with order persistence via [Neon](https://neon.tech) (PostgreSQL) and [Drizzle ORM](https://orm.drizzle.team).
-
+A minimal Next.js demo showcasing how to accept one-time payments and subscriptions using [Creem](https://www.creem.io)
 ## Features
 
 - One-time product checkout (lifetime access)
 - Subscription checkout (monthly billing)
-- Webhook handler with HMAC signature verification
+- Webhook handler with signature verification
 - Order persistence in a Neon PostgreSQL database via Drizzle ORM
 - Payment success page
 
@@ -114,24 +113,6 @@ CREATE TABLE "order" (
 );
 ```
 
-## Available Scripts
-
-| Command                   | Description                           |
-|---------------------------|---------------------------------------|
-| `pnpm dev`                | Start the development server          |
-| `pnpm build`              | Build for production                  |
-| `pnpm start`              | Start the production server           |
-| `pnpm lint`               | Run ESLint                            |
-| `pnpm drizzle-kit push`   | Push schema changes to the database   |
-| `pnpm drizzle-kit studio` | Open Drizzle Studio (DB GUI)          |
-
-## Deployment
-
-Deploy to [Vercel](https://vercel.com) in one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/creem-nextjs-demo)
-
-After deploying, add all three environment variables (`CREEM_API_KEY`, `CREEM_WEBHOOK_SECRET`, `DATABASE_URL`) in the Vercel project settings, and update the webhook URL in Creem dashboard to your production domain.
 
 ## License
 
